@@ -36,7 +36,7 @@ def sendMsg(content,touser):
            "touser" : touser,
            "msgtype" : "text",
            "agentid" : AGENT_ID,
-           ":text"  {
+           "text" : {
                "content" : content
            },
            "safe":0
