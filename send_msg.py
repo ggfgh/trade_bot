@@ -42,7 +42,7 @@ def sendMsg(content,touser):
            "safe":0
         }
     access_token = getToken()
-    r = requests.post("https://qyapi.weixin.qq.com/cgi-bin/message/send?access_token={}".format(access_token),headers=head,proxies=proxies,data=json.dumps(data))
+    r = requests.post("https://qyapi.weixin.qq.com/cgi-bin/message/send?access_token={}".format(access_token),headers=head,data=json.dumps(data))
     # print(r.text)
     if '"errmsg":"ok"' in r.text:
         console.log("[green][+] 消息发送成功！")
